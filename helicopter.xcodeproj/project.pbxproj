@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B414012F1448DE0600FAECFB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B414012E1448DE0600FAECFB /* Cocoa.framework */; };
+		B41401391448DE0600FAECFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B41401371448DE0600FAECFB /* InfoPlist.strings */; };
+		B414013B1448DE0600FAECFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B414013A1448DE0600FAECFB /* main.m */; };
+		B414013F1448DE0600FAECFB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B414013D1448DE0600FAECFB /* Credits.rtf */; };
+		B41401421448DE0600FAECFB /* helicopterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B41401411448DE0600FAECFB /* helicopterAppDelegate.m */; };
+		B41401451448DE0700FAECFB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B41401431448DE0700FAECFB /* MainMenu.xib */; };
+		B414014D1448DE0700FAECFB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B414014C1448DE0700FAECFB /* SenTestingKit.framework */; };
+		B414014E1448DE0700FAECFB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B414012E1448DE0600FAECFB /* Cocoa.framework */; };
+		B41401561448DE0700FAECFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B41401541448DE0700FAECFB /* InfoPlist.strings */; };
+		B41401581448DE0700FAECFB /* helicopterTests.h in Resources */ = {isa = PBXBuildFile; fileRef = B41401571448DE0700FAECFB /* helicopterTests.h */; };
+		B414015A1448DE0700FAECFB /* helicopterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B41401591448DE0700FAECFB /* helicopterTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B414014F1448DE0700FAECFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B41401211448DE0600FAECFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B41401291448DE0600FAECFB;
+			remoteInfo = helicopter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B414012A1448DE0600FAECFB /* helicopter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helicopter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B414012E1448DE0600FAECFB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B41401311448DE0600FAECFB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B41401321448DE0600FAECFB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B41401331448DE0600FAECFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B41401361448DE0600FAECFB /* helicopter-Info.plist */ = {isa = PBXFileReference; path = "helicopter-Info.plist"; sourceTree = "<group>"; };
+		B41401381448DE0600FAECFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B414013A1448DE0600FAECFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B414013C1448DE0600FAECFB /* helicopter-Prefix.pch */ = {isa = PBXFileReference; path = "helicopter-Prefix.pch"; sourceTree = "<group>"; };
+		B414013E1448DE0600FAECFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		B41401401448DE0600FAECFB /* helicopterAppDelegate.h */ = {isa = PBXFileReference; path = helicopterAppDelegate.h; sourceTree = "<group>"; };
+		B41401411448DE0600FAECFB /* helicopterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = helicopterAppDelegate.m; sourceTree = "<group>"; };
+		B41401441448DE0700FAECFB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B414014B1448DE0700FAECFB /* helicopterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = helicopterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B414014C1448DE0700FAECFB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B41401531448DE0700FAECFB /* helicopterTests-Info.plist */ = {isa = PBXFileReference; path = "helicopterTests-Info.plist"; sourceTree = "<group>"; };
+		B41401551448DE0700FAECFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B41401571448DE0700FAECFB /* helicopterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = helicopterTests.h; sourceTree = "<group>"; };
+		B41401591448DE0700FAECFB /* helicopterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = helicopterTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B41401271448DE0600FAECFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B414012F1448DE0600FAECFB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B41401471448DE0700FAECFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B414014D1448DE0700FAECFB /* SenTestingKit.framework in Frameworks */,
+				B414014E1448DE0700FAECFB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B414011F1448DE0600FAECFB = {
+			isa = PBXGroup;
+			children = (
+				B41401341448DE0600FAECFB /* helicopter */,
+				B41401511448DE0700FAECFB /* helicopterTests */,
+				B414012D1448DE0600FAECFB /* Frameworks */,
+				B414012B1448DE0600FAECFB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B414012B1448DE0600FAECFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B414012A1448DE0600FAECFB /* helicopter.app */,
+				B414014B1448DE0700FAECFB /* helicopterTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B414012D1448DE0600FAECFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B414012E1448DE0600FAECFB /* Cocoa.framework */,
+				B414014C1448DE0700FAECFB /* SenTestingKit.framework */,
+				B41401301448DE0600FAECFB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B41401301448DE0600FAECFB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B41401311448DE0600FAECFB /* AppKit.framework */,
+				B41401321448DE0600FAECFB /* CoreData.framework */,
+				B41401331448DE0600FAECFB /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B41401341448DE0600FAECFB /* helicopter */ = {
+			isa = PBXGroup;
+			children = (
+				B41401401448DE0600FAECFB /* helicopterAppDelegate.h */,
+				B41401411448DE0600FAECFB /* helicopterAppDelegate.m */,
+				B41401431448DE0700FAECFB /* MainMenu.xib */,
+				B41401351448DE0600FAECFB /* Supporting Files */,
+			);
+			path = helicopter;
+			sourceTree = "<group>";
+		};
+		B41401351448DE0600FAECFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B41401361448DE0600FAECFB /* helicopter-Info.plist */,
+				B41401371448DE0600FAECFB /* InfoPlist.strings */,
+				B414013A1448DE0600FAECFB /* main.m */,
+				B414013C1448DE0600FAECFB /* helicopter-Prefix.pch */,
+				B414013D1448DE0600FAECFB /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B41401511448DE0700FAECFB /* helicopterTests */ = {
+			isa = PBXGroup;
+			children = (
+				B41401571448DE0700FAECFB /* helicopterTests.h */,
+				B41401591448DE0700FAECFB /* helicopterTests.m */,
+				B41401521448DE0700FAECFB /* Supporting Files */,
+			);
+			path = helicopterTests;
+			sourceTree = "<group>";
+		};
+		B41401521448DE0700FAECFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B41401531448DE0700FAECFB /* helicopterTests-Info.plist */,
+				B41401541448DE0700FAECFB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B41401291448DE0600FAECFB /* helicopter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B414015D1448DE0700FAECFB /* Build configuration list for PBXNativeTarget "helicopter" */;
+			buildPhases = (
+				B41401261448DE0600FAECFB /* Sources */,
+				B41401271448DE0600FAECFB /* Frameworks */,
+				B41401281448DE0600FAECFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = helicopter;
+			productName = helicopter;
+			productReference = B414012A1448DE0600FAECFB /* helicopter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B414014A1448DE0700FAECFB /* helicopterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B41401601448DE0700FAECFB /* Build configuration list for PBXNativeTarget "helicopterTests" */;
+			buildPhases = (
+				B41401461448DE0700FAECFB /* Sources */,
+				B41401471448DE0700FAECFB /* Frameworks */,
+				B41401481448DE0700FAECFB /* Resources */,
+				B41401491448DE0700FAECFB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B41401501448DE0700FAECFB /* PBXTargetDependency */,
+			);
+			name = helicopterTests;
+			productName = helicopterTests;
+			productReference = B414014B1448DE0700FAECFB /* helicopterTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B41401211448DE0600FAECFB /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B41401241448DE0600FAECFB /* Build configuration list for PBXProject "helicopter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B414011F1448DE0600FAECFB;
+			productRefGroup = B414012B1448DE0600FAECFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B41401291448DE0600FAECFB /* helicopter */,
+				B414014A1448DE0700FAECFB /* helicopterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B41401281448DE0600FAECFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B41401391448DE0600FAECFB /* InfoPlist.strings in Resources */,
+				B414013F1448DE0600FAECFB /* Credits.rtf in Resources */,
+				B41401451448DE0700FAECFB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B41401481448DE0700FAECFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B41401561448DE0700FAECFB /* InfoPlist.strings in Resources */,
+				B41401581448DE0700FAECFB /* helicopterTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B41401491448DE0700FAECFB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B41401261448DE0600FAECFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B414013B1448DE0600FAECFB /* main.m in Sources */,
+				B41401421448DE0600FAECFB /* helicopterAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B41401461448DE0700FAECFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B414015A1448DE0700FAECFB /* helicopterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B41401501448DE0700FAECFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B41401291448DE0600FAECFB /* helicopter */;
+			targetProxy = B414014F1448DE0700FAECFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B41401371448DE0600FAECFB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B41401381448DE0600FAECFB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B414013D1448DE0600FAECFB /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B414013E1448DE0600FAECFB /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		B41401431448DE0700FAECFB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B41401441448DE0700FAECFB /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		B41401541448DE0700FAECFB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B41401551448DE0700FAECFB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B414015B1448DE0700FAECFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B414015C1448DE0700FAECFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B414015E1448DE0700FAECFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "helicopter/helicopter-Prefix.pch";
+				INFOPLIST_FILE = "helicopter/helicopter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B414015F1448DE0700FAECFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "helicopter/helicopter-Prefix.pch";
+				INFOPLIST_FILE = "helicopter/helicopter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B41401611448DE0700FAECFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/helicopter.app/Contents/MacOS/helicopter";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "helicopter/helicopter-Prefix.pch";
+				INFOPLIST_FILE = "helicopterTests/helicopterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B41401621448DE0700FAECFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/helicopter.app/Contents/MacOS/helicopter";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "helicopter/helicopter-Prefix.pch";
+				INFOPLIST_FILE = "helicopterTests/helicopterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B41401241448DE0600FAECFB /* Build configuration list for PBXProject "helicopter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B414015B1448DE0700FAECFB /* Debug */,
+				B414015C1448DE0700FAECFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B414015D1448DE0700FAECFB /* Build configuration list for PBXNativeTarget "helicopter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B414015E1448DE0700FAECFB /* Debug */,
+				B414015F1448DE0700FAECFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B41401601448DE0700FAECFB /* Build configuration list for PBXNativeTarget "helicopterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B41401611448DE0700FAECFB /* Debug */,
+				B41401621448DE0700FAECFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B41401211448DE0600FAECFB /* Project object */;
+}
