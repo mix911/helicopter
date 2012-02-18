@@ -1,0 +1,20 @@
+//
+//  vector4d.h
+//  helicopter
+//
+//  Created by demo on 18.02.12.
+//  Copyright 2012 __MyCompanyName__. All rights reserved.
+//
+
+#ifndef helicopter_vector4d_h
+#define helicopter_vector4d_h
+
+//////////////////////////////////////////////////////////////////////////////////
+// 4d vector
+//////////////////////////////////////////////////////////////////////////////////
+typedef struct _vector4d
+{
+    float x, y, z, w;
+} vector4d;
+
+#endif
