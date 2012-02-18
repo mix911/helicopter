@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Camera.eye.x</key>
+	<integer>0</integer>
+	<key>Camera.eye.y</key>
+	<integer>5</integer>
+	<key>Camera.eye.z</key>
+	<integer>5</integer>
+	<key>Camera.center.x</key>
+	<integer>0</integer>
+	<key>Camera.center.y</key>
+	<integer>0</integer>
+	<key>Camera.center.z</key>
+	<integer>0</integer>
+	<key>Camera.up.x</key>
+	<integer>0</integer>
+	<key>Camera.up.y</key>
+	<integer>1</integer>
+	<key>Camera.up.z</key>
+	<integer>0</integer>
+	<key>Terrain.filePath</key>
+	<string>/Users/demo/Documents/helicopter/height_map1.jpg</string>
+	<key>Light.position.x</key>
+	<integer>0</integer>
+	<key>Light.position.y</key>
+	<integer>100</integer>
+	<key>Light.position.z</key>
+	<integer>0</integer>
+	<key>Light.ambient.r</key>
+	<real>0.5</real>
+	<key>Light.ambient.g</key>
+	<real>0.5</real>
+	<key>Light.ambient.b</key>
+	<real>0.5</real>
+	<key>Light.ambient.a</key>
+	<integer>1</integer>
+	<key>Light.diffuse.r</key>
+	<real>0.5</real>
+	<key>Light.diffuse.g</key>
+	<real>0.5</real>
+	<key>Light.diffuse.b</key>
+	<real>0.5</real>
+	<key>Light.diffuse.a</key>
+	<integer>1</integer>
+	<key>Light.specular.r</key>
+	<real>0.99</real>
+	<key>Light.specular.g</key>
+	<real>0.99</real>
+	<key>Light.specular.b</key>
+	<real>0.99</real>
+	<key>Light.specular.a</key>
+	<integer>1</integer>
+</dict>
+</plist>

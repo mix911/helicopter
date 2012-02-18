@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "GLOBAL">
+         <PersistentStrings>
+            
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[Terrain(Private) load]:Terrain.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
