@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#include <sys/timeb.h>
 
 @class Camera;
 @class Cube;
@@ -14,15 +15,29 @@
 @class Light;
 @class OpenGLView;
 
+// TODO: May be better if this class was singleton
+
+//////////////////////////////////////////////////////////////////////////////////
+// Scene - draw and update all rendered objects
+//////////////////////////////////////////////////////////////////////////////////
 @interface Scene : NSObject
 {
-    Camera* camera;
-    Light*  light;
+    Camera*     camera;   // Camera 
+    Light*      light;    // Light
     
-    Cube*       cube;
-    Terrain*    terrain;
+    Cube*       cube;     // Cube object
+    Terrain*    terrain;  // Terrain object
     
-    OpenGLView*   window;
+    OpenGLView* window;   // OpenGLView
+    
+    NSPoint     mouseOld;
+    float       width;
+    float       height;
+    
+    struct timeb    lastTime;
+    struct timeb    currTime;
+    int             fpsCounter;
+
 }
 
 -(id)   initWithOpenGLView:(OpenGLView*)wnd;

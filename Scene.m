@@ -24,16 +24,7 @@
 #include <OpenGl/glu.h>
 #include <sys/timeb.h>
 
-NSPoint mouseOld= {0};
-float   width   = 0.0f;
-float   height  = 0.0f;
-
-struct timeb    lastTime    ={0};
-struct timeb    currTime    ={0};
-int             fpsCounter  = 0;
-
 time_t dateRange(struct timeb* a, struct timeb* b);
-
 time_t dateRange(struct timeb* a, struct timeb* b)
 {
     return (1000 * (b->time - a->time) - a->millitm + b->millitm) / 1000;
@@ -46,6 +37,15 @@ time_t dateRange(struct timeb* a, struct timeb* b)
     self = [super init];
     if (self) {
         @try {
+            
+            memset(&mouseOld, 0, sizeof(mouseOld));
+            memset(&lastTime, 0, sizeof(lastTime));
+            memset(&currTime, 0, sizeof(currTime));
+            
+            width       = 0.0f;
+            height      = 0.0f;
+            fpsCounter  = 0;
+            
             window = wnd;
             [ConfigManager load];
             
