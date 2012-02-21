@@ -11,12 +11,15 @@
 @class Scene;
 @class MainWindow;
 
+//////////////////////////////////////////////////////////////////////////////////
+// OpenGL window
+//////////////////////////////////////////////////////////////////////////////////
 @interface OpenGLView : NSOpenGLView
 {
-    Scene*      scene;
-    NSTimer*    timer;
+    Scene*      scene;              // Scene
+    NSTimer*    timer;              // Update window timer
     
-    IBOutlet MainWindow* window;
+    IBOutlet MainWindow* window;    // Main window, that contain this OpenGLView
 }
 
 -(void) reshape;

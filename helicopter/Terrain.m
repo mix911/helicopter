@@ -16,8 +16,8 @@
 #include "color.h"
 #include "vertex.h"
 
-const float MAX_HEIGHT  = 3.0f;
-const float MAX_X       = 10.0f;
+const float MAX_HEIGHT  = 3.0f;  // The highest point of the terrain
+const float MAX_X       = 10.0f; 
 const float MAX_Y       = 10.0f;
 
 @interface Terrain(Private)
@@ -28,9 +28,12 @@ const float MAX_Y       = 10.0f;
 
 @implementation Terrain(Private)
 
+//////////////////////////////////////////////////////////////////////////////////
+// Load terrain from resource
+//////////////////////////////////////////////////////////////////////////////////
 -(void) load
 {
-    // Загрузим картинку
+    // Load image
     NSString* file = [ConfigManager getValue:@"Terrain.filePath"];
     NSImage* image = [[NSImage alloc] initByReferencingFile:file];
     
@@ -40,42 +43,48 @@ const float MAX_Y       = 10.0f;
         @throw e;
     }
     
-    // Получим прямоугольник картинки
+    // Get image's rectangle
     NSSize size = [image size];
     NSRect rect = NSMakeRect(0.0, 0.0, size.width, size.height);
     
+    
+    // Create bitmap
     [image lockFocus];
     NSBitmapImageRep* img = [[NSBitmapImageRep alloc] initWithFocusedViewRect:rect];
     [image unlockFocus];
     
-    // Получим ширину и высоту картинки
+    // Get width and height of bitmap
     width = (unsigned int)[img pixelsHigh];
     height= (unsigned int)[img pixelsWide];
     
+    // Allocate vertices buffer
     [vertices setLength:sizeof(vertex) * width * height];
     
+    // Get pointer to buffer
     vertex* data = [vertices mutableBytes];
     
+    // Calculate scale factors
     float kx = MAX_X        / width;
     float ky = MAX_HEIGHT   / 255.0f;
     float kz = MAX_Y        / height;
     
-    // Пройдемся по всем пикселям
+    // Foreach pixels
     for (unsigned int y = 0; y < height; ++y) {
         for (unsigned int x = 0; x < width; ++x) {
 
-            // Получим цвет очередного пикселя
+            // Get pixel's color
             NSColor* color = [img colorAtX:x y:y];
             
-            // Разложим его на компоненты TODO: тут можно переделать
+            // Get any component of color
             Byte red    = (Byte)(255.0f * [color redComponent]);
             
-            // Вычислим индекс
+            // Calculate index of current point in vertices buffer
             size_t i = y * width + x;
             
-            // Из цветов получим высоту
+            // Any color is height
             float z = red;
             
+            // Fill current point in vertices buffer
             data[i].v.x = MAX_X / 2.0f - x * kx;
             data[i].v.y = z * ky;
             data[i].v.z = MAX_Y / 2.0f - y * kz;
@@ -85,10 +94,10 @@ const float MAX_Y       = 10.0f;
     unsigned int nheight= height - 1;
     unsigned int nwidth = width - 1;
     
-    // Создадим буфер для нормалей к треугольникам
+    // Create temporary buffer for the triangle's normiles
     vector3d* normiles = malloc(2 * sizeof(vector3d) * nwidth * nheight);
     
-    // Заполним буфер нормалей к треугольникам
+    // Fill temporary buffer
     for (unsigned int ih = 0; ih < nheight; ++ih) {
         
         unsigned int h  = ih * width;
@@ -119,7 +128,7 @@ const float MAX_Y       = 10.0f;
         }
     }
     
-    // Посчитаем нормали к вершинам
+    // Calculate vertice's normilez
     for (unsigned int ih = 0; ih < height; ++ih) {
         
         unsigned int h = ih * width;
@@ -160,24 +169,31 @@ const float MAX_Y       = 10.0f;
 
 @implementation Terrain
 
+//////////////////////////////////////////////////////////////////////////////////
+// Initialization
+//////////////////////////////////////////////////////////////////////////////////
 - (id)init
 {
     self = [super init];
     if (self) {
-        vertices= [[NSMutableData alloc ] init];
-        width   = 0;
-        height  = 0;
+        vertices    = [[NSMutableData alloc ] init];
+        width       = 0;
+        height      = 0;
+        isShowNormal= false;
+        shadeMode   = GL_SMOOTH;
         
         [self load];
     }
     
     return self;
 }
-
+//////////////////////////////////////////////////////////////////////////////////
+// Dealocation
+//////////////////////////////////////////////////////////////////////////////////
 -(void) dealloc
 {
     if (vertices) {
-        free(vertices);
+        [vertices dealloc];
 
         vertices= NULL;
         width   = 0;
@@ -185,9 +201,12 @@ const float MAX_Y       = 10.0f;
     }
 }
 
+//////////////////////////////////////////////////////////////////////////////////
+// Draw terrain
+//////////////////////////////////////////////////////////////////////////////////
 -(void) draw
 {
-    glShadeModel(GL_SMOOTH);
+    glShadeModel(shadeMode);
     
     vertex* data = [vertices mutableBytes];
     
@@ -229,26 +248,28 @@ const float MAX_Y       = 10.0f;
     }
     glEnd();
     
-//    glBegin(GL_LINES);
-//    {
-//        glColor3f(1.0f, 0.0f, 0.0f);
-//        for (unsigned int ih = 0; ih < height; ++ih)
-//        {
-//            unsigned int h = width * ih;
-//            
-//            for (unsigned int iw = 0; iw < width; ++iw)
-//            {
-//                unsigned int i = h + iw;
-//                
-//                vector3d v = data[i].v;
-//                add_vec3d(&v, &data[i].n);
-//                
-//                glVertex3fv((float*)&data[i].v);
-//                glVertex3fv((float*)&v);
-//            }
-//        }
-//    }
-//    glEnd();
+    // If show normal is on
+    if (isShowNormal) {
+        glBegin(GL_LINES);
+        {
+            glColor3f(1.0f, 0.0f, 0.0f);
+            for (unsigned int ih = 0; ih < height; ++ih) {
+                
+                unsigned int h = width * ih;
+                
+                for (unsigned int iw = 0; iw < width; ++iw) {
+                    unsigned int i = h + iw;
+                    
+                    vector3d v = data[i].v;
+                    add_vec3d(&v, &data[i].n);
+                    
+                    glVertex3fv((float*)&data[i].v);
+                    glVertex3fv((float*)&v);
+                }
+            }
+        }
+        glEnd();
+    }
 }
 
 @end

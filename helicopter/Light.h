@@ -11,12 +11,15 @@
 #include "vector4d.h"
 #include "color.h"
 
+//////////////////////////////////////////////////////////////////////////////////
+// Light - represent open gl light
+//////////////////////////////////////////////////////////////////////////////////
 @interface Light : NSObject
 {
-    vector4d    pos;
-    color       amb;
-    color       dif;
-    color       spec;
+    vector4d    pos;    // Position of light
+    color       amb;    // Ambient component
+    color       dif;    // Diffuse component
+    color       spec;   // Specular component
 }
 
 -(id) init;

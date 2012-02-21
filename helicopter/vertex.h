@@ -12,11 +12,14 @@
 #include "vector3d.h"
 #include "color.h"
 
+//////////////////////////////////////////////////////////////////////////////////
+// Vertex structure
+//////////////////////////////////////////////////////////////////////////////////
 typedef struct _vertex
 {
-    vector3d    v;
-    vector3d    n;
-    color       c;
+    vector3d    v;  // Vertex
+    vector3d    n;  // Normal
+    color       c;  // Color
 } vertex;
 
 #endif
